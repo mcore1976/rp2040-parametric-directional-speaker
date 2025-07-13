@@ -6,7 +6,8 @@ My design uses only :
 - set of 10+ ultrasonic transducers for 25kHz
 - 5V Voltage stabilizer : LM7805. This is to power RP2040 board from 12V, we need to provide 5V to 5V-pin of RP2040
 - 2 resistors for 1:2 voltage divider at the ADC input of RP2040 chip. I am using two times 50 Ohm resistor here.
-- couple of electrolytic capacitors for ADC input separation as well as 5V power line stability. I am using 47uF between 5V/GND line and 330uF between 12V/GND. Also we need to separate ADC input using 10uF. The signal is AC and we are trying to make it in the range 0-3.3V
+- couple of electrolytic capacitors for ADC input separation as well as 5V power line stability. I am using 47uF between 5V/GND line and 330uF between 12V/GND.
+- electrolytic capacitor to separate ADC input. I am using 10uF but it can be within the range 1uF-47uF. It will impact the audio signal level. The signal is AC and we are trying to make it in the range 0-3.3V
 
 The RP2040 chip is programmed to use TWO CPU COREs at the very same time. First core is collecting information from ADC input ( converting analog voltage into digital value ) while second core is generating PWM (Pulse Width Modulated) signal to drive the audio amplifier nad set of ultrasonic transducers. I am using the "semaphore" variable to avoid collisions while reading/writing into the variable that holds ADC reading.
 
