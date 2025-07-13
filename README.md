@@ -1,4 +1,4 @@
-This is the simplest, the cheapest Parametric Directional Speaker. This device uses ultrasound as a carrier for amplitude modulated audible signals. 
+This is the simplest, the cheapest Parametric Directional Speaker you can build. This device uses ultrasound as a carrier for amplitude modulated audible signals and sends it in only one direction with high distance. 
 
 ATTENTION! Please download and install RP2040-PWM library into your Arduino before compiling the code : https://github.com/khoih-prog/RP2040_PWM  
 
