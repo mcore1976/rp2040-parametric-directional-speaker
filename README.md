@@ -3,7 +3,7 @@ This is the simplest, the cheapest Ultrasonic Parametric Directional Speaker a m
 ATTENTION! Please download and install RP2040-PWM library into your Arduino before compiling the code : https://github.com/khoih-prog/RP2040_PWM  
 
 My design uses only : 
-- RP2040-zero/RP2040-one board with Raspberry Pi Pico chip programmed in Arduino with Earle Philhower RP2040 core : https://github.com/earlephilhower/arduino-pico
+- RP2040-zero/RP2040-one board with Raspberry Pi Pico chip programmed in Arduino with Earle Philhower RP2040 core : https://github.com/earlephilhower/arduino-pico. I am using Linux based PC (Linux Mint / Ubuntu) for this Arduino + RP2040 core from Earle
 - TPA3116D2 audio amplifier board ( XH - M543 MONO ) which I found working best with 25kHZ ultrasound transducers
 - set of 10+ ultrasonic transducers for 25kHz or other (if different please modify "frequency" variable in the source code)
 - 5V Voltage stabilizer : LM7805. This is to power RP2040 board from 12V, we need to provide 5V to 5V-pin of RP2040
