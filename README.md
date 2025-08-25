@@ -18,3 +18,4 @@ The RP2040 chip is programmed to use TWO CPU COREs at the very same time. First 
 How it works ?
 The Audio Signal gets digitized by Analog to Digital converter that is built-in into Raspberry Pico. The reading is a base to create Pulse Width Modulated signal with Duty Cycle that corresponds to ADC reading. Of course we need to convert AC signal in proper way because we need absolute value of the signal, therefore some additional calculations are made in the code. PWM signal is further send to audio amplifier TPA3116D which makes it strong enough to drive set of ultrasonic transducers. When ultrasound waves hit an obstacle, they get demodulated and audio signal becomes audible. The range is at least 15meters (I checked with only 15 transducers 25kHz)
 
+Hints : Please notice that ultrasonic transducers have non-linear characteristics when being driven by PWM impulses. I would suggest to experiment with offset parameters for the PWM duty cycle. 
