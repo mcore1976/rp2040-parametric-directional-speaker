@@ -12,8 +12,8 @@ const int analogPin = A0;
 
 // global variable for reading ADC 
 int audioreading = 0;
-int adcresult = 0;
-int adcoffset = 0;
+int adcresult = 0;  
+int adcoffset = -100;  // I would suggest to use -100 as adcoffset to avoid distortion due to Transducers non-linearity 
 
 // semaphore for putting data from first core into memory and reading by second core
 bool semaphore;
